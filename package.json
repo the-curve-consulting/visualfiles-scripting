@@ -1,0 +1,45 @@
+{
+  "name": "visualfiles-scripting",
+  "displayName": "VisualFiles Scripting",
+  "description": "Syntax highlighting and language support for VisualFiles Scripting",
+  "version": "1.0.0",
+  "publisher": "thecurve
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "keywords": [
+    "visualfiles",
+    "scripting",
+    "syntax highlighting",
+    "vfs"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "visualfiles-scripting",
+        "aliases": ["VisualFiles Scripting", "vfs"],
+        "extensions": [".vfs"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "visualfiles-scripting",
+        "scopeName": "source.visualfiles-scripting",
+        "path": "./syntaxes/visualfiles-scripting.tmLanguage.json"
+      }
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/the-curve-consulting/visualfiles-scripting.git"
+  },
+  "bugs": {
+    "url": "https://github.com/the-curve-consulting/visualfiles-scripting/issues"
+  },
+  "homepage": "https://github.com/the-curve-consulting/visualfiles-scripting#readme",
+  "license": "MIT"
+} 

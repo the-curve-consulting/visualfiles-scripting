@@ -1,0 +1,14 @@
+.vscode/**
+.vscode-test/**
+examples/**
+node_modules/**
+*.map
+.gitignore
+tsconfig.json
+webpack.config.js
+.eslintrc.json
+**/*.ts
+test/**
+.nyc_output/**
+coverage/**
+**/.DS_Store 

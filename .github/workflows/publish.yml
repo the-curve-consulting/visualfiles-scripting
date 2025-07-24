@@ -1,0 +1,72 @@
+name: Publish Extension
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+jobs:
+  package-and-publish:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: |
+        npm install -g @vscode/vsce
+        
+    - name: Verify package.json
+      run: |
+        echo "Verifying package.json structure..."
+        node -e "
+          const pkg = require('./package.json');
+          if (!pkg.publisher) throw new Error('Missing publisher in package.json');
+          if (!pkg.version) throw new Error('Missing version in package.json');
+          console.log('Package validation passed');
+          console.log('Publisher:', pkg.publisher);
+          console.log('Version:', pkg.version);
+        "
+        
+    - name: Package extension
+      run: |
+        echo "Packaging extension..."
+        vsce package
+        ls -la *.vsix
+        
+    - name: Upload package as artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: vsix-package
+        path: '*.vsix'
+        
+    - name: Publish to VS Code Marketplace
+      run: |
+        echo "Publishing to VS Code Marketplace..."
+        vsce publish -p ${{ secrets.VSCE_PAT }}
+      env:
+        VSCE_PAT: ${{ secrets.VSCE_PAT }}
+        
+    - name: Get package version
+      id: package-version
+      run: |
+        VERSION=$(node -e "console.log(require('./package.json').version)")
+        echo "version=$VERSION" >> $GITHUB_OUTPUT
+        echo "Package version: $VERSION"
+        
+    - name: Upload VSIX to GitHub Release
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ github.event.release.upload_url }}
+        asset_path: ./visualfiles-scripting-${{ steps.package-version.outputs.version }}.vsix
+        asset_name: visualfiles-scripting-${{ steps.package-version.outputs.version }}.vsix
+        asset_content_type: application/zip 
