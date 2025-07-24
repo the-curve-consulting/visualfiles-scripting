@@ -1,12 +1,12 @@
-# VisualFiles Scripting for VS Code
+# Visualfiles Scripting for VS Code
 
-A Visual Studio Code extension that provides syntax highlighting and language support for VisualFiles Scripting language.
+A Visual Studio Code extension that provides syntax highlighting and language support for Visualfiles Scripting language.
 
 ## Features
 
-- **Syntax Highlighting**: Full syntax highlighting for VisualFiles scripting commands, variables, comments, and operators
+- **Syntax Highlighting**: Full syntax highlighting for Visualfiles scripting commands, variables, comments, and operators
 - **Language Support**: Proper language configuration with auto-closing brackets and comment support
-- **File Association**: Automatically recognizes `.vfs` and `.txt` files containing VisualFiles scripts
+- **File Association**: Automatically recognizes `.vfs` and `.txt` files containing Visualfiles scripts
 
 ## Syntax Highlighting Features
 
@@ -49,7 +49,7 @@ A Visual Studio Code extension that provides syntax highlighting and language su
 
 ## Usage
 
-1. Open any VisualFiles script file (`.vfs` or `.txt`)
+1. Open any Visualfiles script file (`.vfs` or `.txt`)
 2. The syntax highlighting will automatically activate
 3. Use VS Code's built-in features like:
    - Folding code blocks
@@ -59,12 +59,12 @@ A Visual Studio Code extension that provides syntax highlighting and language su
 ## File Extensions
 
 The extension recognizes these file patterns:
-- `.vfs` - Dedicated VisualFiles script files
-- `.txt` - Text files (commonly used for VisualFiles scripts)
+- `.vfs` - Dedicated Visualfiles script files
+- `.txt` - Text files (commonly used for Visualfiles scripts)
 
 ## Language Features
 
 - **Comment Support**: Use `Ctrl+/` to toggle line comments
 - **Bracket Matching**: Automatic bracket pair highlighting
 - **Auto-closing**: Brackets and quotes auto-close
-- **Word Selection**: Double-click to select VisualFiles variables and commands
+- **Word Selection**: Double-click to select Visualfiles variables and commands

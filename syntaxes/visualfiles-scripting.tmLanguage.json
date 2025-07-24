@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-  "name": "VisualFiles Scripting",
+  "name": "Visualfiles Scripting",
   "scopeName": "source.visualfiles-scripting",
   "patterns": [
     { "include": "#header-comment" },

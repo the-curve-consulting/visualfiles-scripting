@@ -1,12 +1,12 @@
 # Change Log
 
-All notable changes to the "VisualFiles Scripting" extension will be documented in this file.
+All notable changes to the "Visualfiles Scripting" extension will be documented in this file.
 
 ## [1.0.0] - 2024-01-01
 
 ### Added
-- Initial release of VisualFiles Scripting syntax highlighting
-- Complete syntax highlighting for all VisualFiles scripting constructs:
+- Initial release of Visualfiles Scripting syntax highlighting
+- Complete syntax highlighting for all Visualfiles scripting constructs:
   - Commands
   - Variables
   - Comments

@@ -1,7 +1,7 @@
 {
   "name": "visualfiles-scripting",
-  "displayName": "VisualFiles Scripting",
-  "description": "Syntax highlighting and language support for VisualFiles Scripting",
+  "displayName": "Visualfiles Scripting",
+  "description": "Syntax highlighting and language support for Visualfiles Scripting",
   "version": "1.0.0",
   "publisher": "thecurve",
   "engines": {
@@ -20,7 +20,7 @@
     "languages": [
       {
         "id": "visualfiles-scripting",
-        "aliases": ["VisualFiles Scripting", "vfs"],
+        "aliases": ["Visualfiles Scripting", "vfs"],
         "extensions": [".vfs"],
         "configuration": "./language-configuration.json"
       }
