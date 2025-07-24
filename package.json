@@ -3,7 +3,7 @@
   "displayName": "VisualFiles Scripting",
   "description": "Syntax highlighting and language support for VisualFiles Scripting",
   "version": "1.0.0",
-  "publisher": "thecurve
+  "publisher": "thecurve",
   "engines": {
     "vscode": "^1.74.0"
   },
