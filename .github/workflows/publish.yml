@@ -47,19 +47,19 @@ jobs:
         name: vsix-package
         path: '*.vsix'
         
-    - name: Publish to VS Code Marketplace
-      run: |
-        echo "Publishing to VS Code Marketplace..."
-        vsce publish -p ${{ secrets.VSCE_PAT }}
-      env:
-        VSCE_PAT: ${{ secrets.VSCE_PAT }}
+    # - name: Publish to VS Code Marketplace
+    #   run: |
+    #     echo "Publishing to VS Code Marketplace..."
+    #     vsce publish -p ${{ secrets.VSCE_PAT }}
+    #   env:
+    #     VSCE_PAT: ${{ secrets.VSCE_PAT }}
         
-    - name: Get package version
-      id: package-version
-      run: |
-        VERSION=$(node -e "console.log(require('./package.json').version)")
-        echo "version=$VERSION" >> $GITHUB_OUTPUT
-        echo "Package version: $VERSION"
+    # - name: Get package version
+    #   id: package-version
+    #   run: |
+    #     VERSION=$(node -e "console.log(require('./package.json').version)")
+    #     echo "version=$VERSION" >> $GITHUB_OUTPUT
+    #     echo "Package version: $VERSION"
         
     - name: Upload VSIX to GitHub Release
       uses: actions/upload-release-asset@v1
